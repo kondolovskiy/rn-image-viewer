@@ -1,5 +1,5 @@
 # Application run
-This application uses (EXPO)[https://docs.expo.dev/] for development
+This application uses [EXPO](https://docs.expo.dev/) for development
 
 To run this application:
 - run `yarn isntall` to install all dependencies

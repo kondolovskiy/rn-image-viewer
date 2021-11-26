@@ -5,6 +5,7 @@ import ImageResize from '../components/ImageResize'
 import UserInfo from '../components/UserInfo'
 import Button from '../components/Button'
 import { logOut } from '../actions'
+import { imageUri } from '../constants/Resources'
 
 interface IProps {
   user: any, 
@@ -17,7 +18,7 @@ function PictureScreen({ user, logOut }: IProps) {
     <View style={{ width: '80%', alignSelf: 'center', marginTop: 50 }}>
       <UserInfo userId={user.id} />
       <ImageResize 
-        uri='https://images.theconversation.com/files/65817/original/image-20141128-9776-1bxwzxm.jpg?ixlib=rb-1.1.0&rect=106%2C65%2C841%2C657&q=45&auto=format&w=926&fit=clip'
+        uri={imageUri}
       />
       <Button
         onPress={logOut}

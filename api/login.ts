@@ -1,13 +1,13 @@
+import { loginEndpoint } from "../constants/Resources"
+
 export interface IResponse {
   code: string,
   id: string,
   password: string
 }
 
-const endpoint = 'https://616ee85f715a630017b3999d.mockapi.io/api/v1/login/'
-
 export async function logIn({ code, password }: { code: string, password: string}): Promise<IResponse> {
-  const response = await fetch(endpoint, {
+  const response = await fetch(loginEndpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

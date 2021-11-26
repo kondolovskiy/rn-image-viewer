@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { View } from 'react-native'
-import ImageResize from '../components/ImageResize'
-import UserInfo from '../components/UserInfo'
-import Button from '../components/Button'
-import { logOut } from '../actions'
-import { imageUri } from '../constants/Resources'
+import ImageResize from '../../components/ImageResize'
+import UserInfo from '../../components/UserInfo'
+import Button from '../../components/Button'
+import { logOut } from '../../actions'
+import { imageUri } from '../../constants/Resources'
+import styles from './styles'
 
 interface IProps {
   user: any, 
@@ -15,7 +16,7 @@ interface IProps {
 function PictureScreen({ user, logOut }: IProps) {
 
   return (
-    <View style={{ width: '80%', alignSelf: 'center', marginTop: 50 }}>
+    <View style={styles.screenWrapper}>
       <UserInfo userId={user.id} />
       <ImageResize 
         uri={imageUri}

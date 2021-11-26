@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { View } from 'react-native'
-import Login from '../components/Login'
-import Loader from '../components/Loader'
+import Login from '../../components/Login'
+import Loader from '../../components/Loader'
 import { connect } from 'react-redux'
-import { logIn } from '../actions'
+import { logIn } from '../../actions'
 
 interface IProps {
   logIn: (code: string, password: string) => void
